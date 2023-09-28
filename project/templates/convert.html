@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Convert
+{% endblock %}
+
+{% block main %}
+<h2 style="text-align: left;
+font-weight: bold;
+color: #333;
+margin-left: 50px;">Converter: </h2>
+<div class="container-fluid">
+    <div class="container noP">
+        <div class="leftcol">
+            <div class="col-md-12 shadowBox">
+                <div class="row">
+                    <div class="form col-md-12">
+                        <form id="binary_calculator_form" method="post">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label class="labels">Number:</label>
+                                    <input autocomplete="off" autofocus class="form-control" id="num1" name="input" placeholder="e.g: 00111111100000000000000000000000" type="numeric" required>
+                                </div>
+                                <div class="col-sm-12 my-2">
+                                    <label for="conversionType" class="sr-only"> Select Conversion Type:</label>
+                                    <label style="font-weight: bold; font-size: 18px">Conversion type:</label>
+
+                                    <select class="form-control" id="conversionType" name="conversionType">
+                                        <option value="" disabled selected >Select an option</option>
+                                        <option value="binary_to_decimal">Binary to Decimal</option>
+                                        <option value="decimal_to_binary">Decimal to Binary</option>
+                                        <option value="twos_complement">2's Complement</option>
+                                        <option value="float_to_binary">Float to IEEE Binary Representation (32 bit)</option>
+                                        <option value="binary_to_float">IEEE Binary Representation (32 bit) to Floating Point Decimal</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-center my-3">
+                                <button class="btn btn-primary" type="submit">Convert</button>
+                                <button type="button" id="reset" class="btn btn-info preloader" style="min-width: 80px;" onclick="resetForm()">
+                                    Reset
+                                </button>
+
+
+                                <script>
+                                    function resetForm() {
+                                        document.getElementById("binary_calculator_form").reset();
+                                    }
+                                </script>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

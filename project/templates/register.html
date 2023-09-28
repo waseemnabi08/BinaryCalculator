@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <div class="container mt-4" style="max-width: 400px; background-color: #f8f9fa; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px;">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/register" method="post">
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <input autocomplete="off" autofocus class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <input autocomplete="off" class="form-control" id="username" name="username" placeholder="Username" type="text" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <input autocomplete="off" class="form-control" id="password" name="password" placeholder="Password" type="password" minlength="6" required>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <input autocomplete="off" class="form-control" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password" minlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit" style="background-color: #007bff; border: none; border-radius: 5px; padding: 10px; width: 100%; transition: background-color 0.15s ease-in-out;">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

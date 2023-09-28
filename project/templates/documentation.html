@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Documentation
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <h2 style="text-align: left;">Binary Calculator</h2>
+    <p>Welcome to the Binary Calculator documentation. This page provides details on how to use the calculator and its features.</p>
+
+    <h3 style="text-align: left;">Binary Operations</h3>
+    <p style="text-align: left;">This section covers basic binary arithmetic operations.</p>
+
+    <h4 style="text-align: left;">Addition</h4>
+    <p style="text-align: left;"><strong>Route:</strong> /</p>
+    <p style="text-align: left;"><strong>Method:</strong> POST</p>
+    <p style="text-align: left;"><strong>Description:</strong> Perform binary addition of two binary numbers.</p>
+    <p style="text-align: left;"><strong>Parameters:</strong></p>
+    <ul>
+        <li style="text-align: left;"><strong>num1:</strong> The first binary number (string).</li>
+        <li style="text-align: left;"><strong>num2:</strong> The second binary number (string).</li>
+    </ul>
+    <p style="text-align: left;"><strong>Example:</strong> To add binary numbers, enter num1 and num2, select "Addition" as the operation, and submit the form.</p>
+
+    <h4 style="text-align: left;">Subtraction</h4>
+    <p style="text-align: left;"><strong>Route:</strong> /</p>
+    <p style="text-align: left;"><strong>Method:</strong> POST</p>
+    <p style="text-align: left;"><strong>Description:</strong> Perform binary subtraction of two binary numbers.</p>
+    <p style="text-align: left;"><strong>Parameters:</strong></p>
+    <ul>
+        <li style="text-align: left;"><strong>num1:</strong> The first binary number (string).</li>
+        <li style="text-align: left;"><strong>num2:</strong> The second binary number (string).</li>
+    </ul>
+    <p style="text-align: left;"><strong>Example:</strong> To subtract binary numbers, enter num1 and num2, select "Subtraction" as the operation, and submit the form.</p>
+
+    <!-- Existing Documentation -->
+
+    <h3 style="text-align: left;">Conversion Operations</h3>
+    <p style="text-align: left;">This section explains how to perform various binary conversions.</p>
+
+    <h4 style="text-align: left;">Binary to Decimal Conversion</h4>
+    <p style="text-align: left;"><strong>Route:</strong> /convert</p>
+    <p style="text-align: left;"><strong>Method:</strong> POST</p>
+    <p style="text-align: left;"><strong>Description:</strong> Convert a binary number to its decimal equivalent.</p>
+    <p style="text-align: left;"><strong>Parameters (POST):</strong></p>
+    <ul>
+        <li style="text-align: left;"><strong>input:</strong> The binary number to convert (string).</li>
+        <li style="text-align: left;"><strong>conversionType:</strong> Select "Binary to Decimal" as the conversion type.</li>
+    </ul>
+    <p style="text-align: left;"><strong>Example:</strong> Enter a binary number, select "Binary to Decimal" as the conversion type, and submit the form to perform the conversion.</p>
+
+    <h4 style="text-align: left;">Decimal to Binary Conversion</h4>
+    <p style="text-align: left;"><strong>Route:</strong> /convert</p>
+    <p style="text-align: left;"><strong>Method:</strong> POST</p>
+    <p style="text-align: left;"><strong>Description:</strong> Convert a decimal number to its binary equivalent.</p>
+    <p style="text-align: left;"><strong>Parameters (POST):</strong></p>
+    <ul>
+        <li style="text-align: left;"><strong>input:</strong> The decimal number to convert (integer).</li>
+        <li style="text-align: left;"><strong>conversionType:</strong> Select "Decimal to Binary" as the conversion type.</li>
+    </ul>
+    <p style="text-align: left;"><strong>Example:</strong> Enter a decimal number, select "Decimal to Binary" as the conversion type, and submit the form to perform the conversion.</p>
+
+    <h4 style="text-align: left;">Floating-Point Conversion</h4>
+    <p style="text-align: left;"><strong>Route:</strong> /convert</p>
+    <p style="text-align: left;"><strong>Method:</strong> POST</p>
+    <p style="text-align: left;"><strong>Description:</strong> Convert between floating-point representations (binary to float and vice versa).</p>
+    <p style="text-align: left;"><strong>Parameters (POST):</strong></p>
+    <ul>
+        <li style="text-align: left;"><strong>input:</strong> The floating-point number to convert (string).</li>
+        <li style="text-align: left;"><strong>conversionType:</strong> Select the desired conversion type (e.g., "Binary to Float").</li>
+    </ul>
+    <p style="text-align: left;"><strong>Example:</strong> Enter a floating-point number, select the conversion type, and submit the form to perform the conversion.</p>
+
+    <h4 style="text-align: left;">Two's Complement</h4>
+    <p style="text-align: left;"><strong>Route:</strong> /convert</p>
+    <p style="text-align: left;"><strong>Method:</strong> POST</p>
+    <p style="text-align: left;"><strong>Description:</strong> Compute the two's complement of a binary number.</p>
+    <p style="text-align: left;"><strong>Parameters (POST):</strong></p>
+    <ul>
+        <li style="text-align: left;"><strong>input:</strong> The binary number to complement (string).</li>
+        <li style="text-align: left;"><strong>conversionType:</strong> Select "Two's Complement" as the conversion type.</li>
+    </ul>
+    <p style="text-align: left;"><strong>Example:</strong> Enter a binary number, select "Two's Complement" as the conversion type, and submit the form to compute the result.</p>
+
+    <!-- Add documentation for the "arithmetic" route and operations -->
+
+    <h3 style="text-align: left;">Binary Arithmetic</h3>
+    <p style="text-align: left;">This section covers binary arithmetic operations and bitwise operations.</p>
+
+    <h4 style="text-align: left;">Signed Addition</h4>
+    <p style="text-align: left;"><strong>Route:</strong> /arithmetic</p>
+    <p style="text-align: left;"><strong>Method:</strong> POST</p>
+    <p style="text-align: left;"><strong>Description:</strong> Perform signed addition of two binary numbers.</p>
+    <p style="text-align: left;"><strong>Parameters (POST):</strong></p>
+    <ul>
+        <li style="text-align: left;"><strong>num1:</strong> The first binary number (string).</li>
+        <li style="text-align: left;"><strong>num2:</strong> The second binary number (string).</li>
+        <li style="text-align: left;"><strong>op:</strong> Select "Signed_add" as the operation.</li>
+    </ul>
+    <p style="text-align: left;"><strong>Example:</strong> Enter two signed binary numbers, select "Signed_add" as the operation, and submit the form to compute the result.</p>
+
+    <h4 style="text-align: left;">Signed Subtraction</h4>
+    <p style="text-align: left;"><strong>Route:</strong> /arithmetic</p>
+    <p style="text-align: left;"><strong>Method:</strong> POST</p>
+    <p style="text-align: left;"><strong>Description:</strong> Perform signed subtraction of two binary numbers.</p>
+    <p style="text-align: left;"><strong>Parameters (POST):</strong></p>
+    <ul>
+        <li style="text-align: left;"><strong>num1:</strong> The first binary number (string).</li>
+        <li style="text-align: left;"><strong>num2:</strong> The second binary number (string).</li>
+        <li style="text-align: left;"><strong>op:</strong> Select "Signed_sub" as the operation.</li>
+    </ul>
+    <p style="text-align: left;"><strong>Example:</strong> Enter two signed binary numbers, select "Signed_sub" as the operation, and submit the form to compute the result.</p>
+
+    <!-- Other operations and content here... -->
+
+</div>
+{% endblock %}

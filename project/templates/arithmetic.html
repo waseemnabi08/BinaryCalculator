@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Binary Arithmetic
+{% endblock %}
+
+{% block main %}
+<h2 style="text-align: left;
+font-weight: bold;
+color: #333;
+margin-left: 10px;">Binary Arithmetics: </h2>
+<div class="container-fluid">
+    <div class="container noP">
+        <div class="leftcol">
+            <div class="col-md-12 shadowBox">
+                <div class="row">
+                    <div class="form col-md-12">
+                        <form id="binary_calculator_form" method="post">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label class="labels">First Number:</label>
+                                    <input autocomplete="off" autofocus class="form-control" id="num1" name="num1" placeholder="e.g: 1010" type="text" required>
+                                </div>
+                                <div class="col-sm-12 my-2">
+                                    <label for="op" class="sr-only">Opetaiom:</label>
+                                    <label style="font-weight: bold; font-size: 18px">Operation:</label>
+
+                                    <select class="form-control" id="op" name="op">
+                                        <option value="" disabled selected >Select an option</option>
+                                        <option value="Signed_add">Signed Addition</option>
+                                        <option value="Signed_sub">Signed Subtraction</option>
+                                        <option value="float_add">Floating Point Binary Addition(32 bit)</option>
+                                        <option value="float_sub">Flaoting Point Binary Subtraction(32 bit)</option>
+                                        <option value="float_mul">Floating Point Binary Multiplication(32 bit)</option>
+                                        <option value="Left_shift">Left Shift</option>
+                                        <!-- Add more operations here -->
+                                        <option value="Right_shift">Right Shift</option>
+                                        <option value="AND">Bitwise AND</option>
+                                        <option value="OR">Bitwise OR</option>
+                                        <option value="XOR">Bitwise XOR</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label class="labels">Second Number:</label>
+                                    <input autocomplete="off" autofocus class="form-control" id="num2" name="num2" placeholder="e.g: 1010" type="text" required>
+                                </div>
+                            </div>
+                            <div class="text-center my-3">
+                                <button class="btn btn-primary" type="submit">Calculate</button>
+                                <button type="button" id="reset" class="btn btn-info preloader" style="min-width: 80px;" onclick="resetForm()">
+                                    Reset
+                                </button>
+                                <script>
+                                    function resetForm() {
+                                        document.getElementById("binary_calculator_form").reset();
+                                    }
+                                </script>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

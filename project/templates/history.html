@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+  <h1> History: </h1>
+  <table style='margin-top: 30px' class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Number 1</th> <!-- Heading for the first column -->
+        <th scope="col">Operation</th> <!-- Heading for the second column -->
+        <th scope="col">Number 2</th> <!-- Heading for the third column -->
+        <th scope="col">Result</th> <!-- Heading for the fourth column -->
+        <th scope="col">Time</th> <!-- Heading for the fifth column -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in operations %}
+      <tr>
+        <td>{{ row["num1"] }}</td>
+        <td>{{ row["op"] }}</td>
+        <td>{{ row["num2"] }}</td>
+        <td>{{ row["result"] }}</td>
+        <td>{{ row["time"]}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

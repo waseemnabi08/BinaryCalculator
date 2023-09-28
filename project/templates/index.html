@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+
+
+{% block main %}
+<div class="container-fluid">
+    <div class="container noP">
+        <!-- Add this conditional block to display the message only for non-logged-in users -->
+        {% if not session["user_id"] %}
+        <div class="row">
+            <div class="text-left" style="color: #000000; font-family: sans-serif; font-size: 25px;">
+                <h3>
+                    <span class="nav-link text-muted">
+                        <a href="/register" style="text-decoration: none; color: #000000;">Register</a> or
+                        <a href="/login" style="text-decoration: none; color: #000000;">Login</a> to access all the features
+                    </span>
+                </h3>
+            </div>
+        </div>
+
+        {% endif %}
+        <!-- End of conditional block -->
+
+
+<div class="container-fluid">
+    <div class="container noP">
+        <div class="leftcol">
+            <div class="col-md-12 shadowBox">
+                <div class="row">
+                    <div class="form col-md-12">
+                        <form id="binary_calculator_form" method="post">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <label class="labels">First Number:</label>
+                                    <input autocomplete="off" autofocus class="form-control" id="num1" name="num1" placeholder="e.g: 1010" type="numeric" required>
+                                </div>
+
+                                <div class="col-sm-12 my-2">
+                                    <label for="operation" class="sr-only"> Select Operation:</label>
+                                    <label style="font-weight: bold; font-size: 18px">Operation:</label>
+                                    <select class="form-control" id="operation" name="operation" type="text">
+                                        <option value="" disabled selected >Operation</option>
+                                        <option value="add">addition (+)</option>
+                                        <option value="sub">subtraction (-)</option>
+                                        <option value="mul">multiplication (×)</option>
+                                        <option value="div">division (÷)</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label class="labels">Second Number:</label>
+                                    <input autocomplete="off" autofocus class="form-control" id="num2" name="num2" placeholder="e.g: 1010" type="numeric" required>
+                                </div>
+                            </div>
+                            <div class="text-center my-3">
+                                <input name="calc_submit" value="1" type="hidden">
+                                <button type="submit" id="calculate" class="btn btn-info preloader">
+                                    <span id="submit-spinner">Calculate</span>
+                                    <div class="loading loading-overlay"><span>Calculating..</span></div>
+                                </button>
+                                <button type="button" id="reset_form" class="btn btn-info preloader" style="min-width: 80px;" onclick="resetForm()">
+                                    Reset
+                                </button>
+
+                                <script>
+                                    function resetForm() {
+                                        document.getElementById("binary_calculator_form").reset();
+                                    }
+                                </script>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 result-sec mt-2 p-0" style="display: none;">
+
+            <div class="col-md-12 mt-3">
+                <div class="row">
+                    <div class="col-md-6 toc bg-light py-2 px-3  rounded">
+                        <span class="d-block font-weight-bold pb-1 mb-3 h">Table of contents:</span>
+                        <ul class="pl-1">
+                            <li class="toc_font_size">
+                                <a href="#calc-binary">1. How to Calculate Binary Numbers</a>
+                            </li>
+                            <li class="toc_font_size">
+                                <a href="#example-binary-calculation">2. Example Binary Calculation</a>
+                            </li>
+                        </ul>
+                    </div>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tips and Tricks
+{% endblock %}
+
+{% block main %}
+
+
+    <h1 style="text-align: left;">Binary Numbers and Their Importance: </h1>
+    <p style="text-align: left;">Binary numbers are a fundamental part of computer science and digital technology. They are a numerical system that uses only two symbols, typically 0 and 1, to represent numbers. Each digit in a binary number is called a "bit," which is the smallest unit of data in computing.</p>
+
+    <p style="text-align: left;">Binary numbers are essential for several reasons:</p>
+
+    <ol style="text-align: left;">
+        <li style="text-align: left;"><strong>Foundation of Digital Computers:</strong> Binary is the language of computers. Inside a computer's electronic circuits, everything is represented using binary, including numbers, characters, and instructions. This is because electronic components can easily represent two states, which aligns perfectly with binary's 0 and 1.</li>
+
+        <li style="text-align: left;"><strong>Data Storage:</strong> All data in a computer's memory and storage devices, such as RAM, hard drives, and solid-state drives, are stored in binary format. Each piece of data, whether it's text, images, or videos, is converted into a binary representation for storage and processing.</li>
+
+        <li style="text-align: left;"><strong>Arithmetic Operations:</strong> Computers perform arithmetic operations (addition, subtraction, multiplication, division) using binary numbers. Complex calculations are broken down into binary operations by the CPU.</li>
+
+        <li style="text-align: left;"><strong>Logic and Boolean Algebra:</strong> Binary is also crucial in logic and Boolean algebra, which forms the basis of computer programming and digital circuit design. Logical operations like AND, OR, and NOT can be implemented using binary values.</li>
+
+        <li style="text-align: left;"><strong>Digital Communication:</strong> In telecommunications and data transmission, information is often encoded in binary form before being sent over networks. This ensures that data is transmitted accurately and reliably.</li>
+
+        <li style="text-align: left;"><strong>Programming:</strong> As someone studying computer engineering and coding, you'll frequently work with binary representations in programming. Understanding binary is essential for tasks like bitwise operations and low-level programming.</li>
+
+        <li style="text-align: left;"><strong>Information Compression:</strong> Binary representations are often used in data compression techniques to reduce the size of files. For example, image and video compression algorithms convert data into a more efficient binary format.</li>
+    </ol>
+
+    <p style="text-align: left;">In essence, binary numbers are the backbone of the digital world. They enable computers to process and store information efficiently, which is crucial in our increasingly digitalized society. As a computer engineering student, gaining a solid understanding of binary numbers is a foundational step towards achieving your goal of becoming a proficient computer engineer with expertise in both hardware and software.</p>
+
+    <h1 style="text-align: left; font-size: 30px;">Steps to convert Decimal Numbers to Binary Numbers:</h1>
+    <h5 style="text-align: left;">Follow these steps to convert a decimal number to binary:</h5>
+
+    <ol>
+        <li style="text-align: left;"><strong>Understand the Basics:</strong> Binary is a base-2 numeral system using 0 and 1.</li>
+        <li style="text-align: left;"><strong>Start with the Decimal Number:</strong> Begin with the decimal number you want to convert.</li>
+        <li style="text-align: left;"><strong>Divide by 2:</strong> Divide the decimal number by 2, note down the quotient and remainder.</li>
+        <li style="text-align: left;"><strong>Repeat the Process:</strong> Continue dividing the quotient by 2 until it becomes 0.</li>
+        <li style="text-align: left;"><strong>Write Down the Remainders:</strong> Write down the remainders in reverse order.</li>
+        <li style="text-align: left;"><strong>Read the Binary Number:</strong> The binary representation is the reverse of the remainders.</li>
+    </ol>
+
+    <h2 style="text-align: left;">Example: Converting 25 to Binary</h2>
+    <p style="text-align: left;">Let's convert the decimal number 25 to binary using the steps above:</p>
+
+
+    <p>Start with 25.</p>
+    <li>25 ÷ 2 = 12 remainder 1.</li>
+    <li>12 ÷ 2 = 6 remainder 0.</li>
+    <li>6 ÷ 2 = 3 remainder 0.</li>
+    <li>3 ÷ 2 = 1 remainder 1.</li>
+    <li>1 ÷ 2 = 0 remainder 1.</li>
+    </ol>
+
+    <p style="text-align: left;">Reading the remainders in reverse order: 11001.</p>
+
+    <p style="text-align: left;">So, the binary representation of 25 is 11001.</p>
+
+    <h1 style="text-align: left; font-size: 30px;">Conversion from Binary Numbers to Decimal:</h1>
+    <h5 style="text-align: left;">Follow these steps to convert a binary number to decimal:</h5>
+
+    <ol>
+        <li style="text-align: left;"><strong>Understand the Basics:</strong> Decimal is a base-10 numeral system, while binary is base-2.</li>
+        <li style="text-align: left;"><strong>Start with the Binary Number:</strong> Begin with the binary number you want to convert.</li>
+        <li style="text-align: left;"><strong>Assign a Position Value:</strong> Assign position values to each digit in the binary number, starting from the rightmost digit with a value of 1 and doubling the value for each position to the left.</li>
+        <li style="text-align: left;"><strong>Multiply and Sum:</strong> Multiply each binary digit by its position value and sum all the results.</li>
+        <li style="text-align: left;"><strong>Result is Decimal:</strong> The sum obtained in the previous step is the decimal equivalent of the binary number.</li>
+    </ol>
+
+    <h3 style="text-align: left;">Example: Converting 11001 to Decimal</h3>
+    <p style="text-align: left;">Let's convert the binary number 11001 to decimal using the steps above:</p>
+
+
+    <li style="text-align: left;">Start with 11001.</li>
+    <li style="text-align: left;">Assign position values: 1 2 4 8 16 (from right to left).</li>
+    <li style="text-align: left;">Multiply and sum: (1 * 1) + (0 * 2) + (0 * 4) + (1 * 8) + (1 * 16) = 1 + 0 + 0 + 8 + 16 = 25.</li>
+
+
+    <p style="text-align: left;">So, the decimal representation of the binary number 11001 is 25.</p>
+
+
+{% endblock %}

@@ -1,0 +1,447 @@
+<!-- result.html -->
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+{% block main %}
+
+    {% if operation == "binary_to_decimal" %}
+
+        <div class="table-responsive">
+            <table class="table table-bordered">
+            <thead>
+            <tr class="bg-info text-white">
+                <td class="info" colspan="2" style="font-size: 25px;">Result: Binary to Decimal</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            </tr>
+            <tr>
+            <th scope="row">Binary number result:</th>
+            <td>
+            <div id="y1">{{num}}</div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Decimal number result:</th>
+            <td>
+            <div id="y2">{{result}}</div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Hex number result:</th>
+            <td>
+            <div id="y3">0x{{hex}}</div>
+            </td>
+            </tr>
+            <tr class="ans_caption">
+            <td colspan="2">
+            <div>
+
+    {% elif operation == "decimal_to_binary" %}
+    <div class="table-responsive">
+        <table class="table table-bordered">
+        <thead>
+        <tr class="bg-info text-white">
+            <td class="info" colspan="2" style="font-size: 25px;">Result: Decimal to Binary</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        </tr>
+        <tr>
+        <th scope="row">Binary number result:</th>
+        <td>
+        <div id="y1">{{result}}</div>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">Decimal number result:</th>
+        <td>
+        <div id="y2">{{num}}</div>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">Hex number result:</th>
+        <td>
+        <div id="y3">0x{{hex}} </div>
+        </td>
+        </tr>
+        <tr class="ans_caption">
+        <td colspan="2">
+        <div>
+
+    </div>
+    {% elif operation == "float_to_binary" %}
+    <div class="table-responsive">
+        <table class="table table-bordered">
+        <thead>
+        <tr class="bg-info text-white">
+            <td class="info" colspan="2" style="font-size: 25px;">Result: Float to Binary</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        </tr>
+        <tr>
+        <th scope="row">Binary number result:</th>
+        <td>
+        <div id="y1">{{result}}</div>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">Decimal number result:</th>
+        <td>
+        <div id="y2">{{num}}</div>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">Hex number result:</th>
+        <td>
+        <div id="y3">0x{{hex}} </div>
+        </td>
+        </tr>
+        <tr class="ans_caption">
+        <td colspan="2">
+        <div>
+
+    </div>
+
+    {% elif operation == "binary_to_float" %}
+    <div class="table-responsive">
+        <table class="table table-bordered">
+        <thead>
+        <tr class="bg-info text-white">
+            <td class="info" colspan="2" style="font-size: 25px;">Result: Binary to Float</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        </tr>
+        <tr>
+        <th scope="row">Binary number result:</th>
+        <td>
+        <div id="y1">{{num}}</div>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">Decimal number result:</th>
+        <td>
+        <div id="y2">{{result}}</div>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">Hex number result:</th>
+        <td>
+        <div id="y3">0x{{hex}} </div>
+        </td>
+        </tr>
+        <tr class="ans_caption">
+        <td colspan="2">
+        <div>
+
+    </div>
+    {% elif operation == "twos_complement" %}
+    <div class="table-responsive">
+        <table class="table table-bordered">
+        <thead>
+        <tr class="bg-info text-white">
+            <td class="info" colspan="2" style="font-size: 25px;">Result: Binary to Float</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        </tr>
+        <tr>
+        <th scope="row">Binary number result:</th>
+        <td>
+        <div id="y1">{{num}}</div>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">2's complemet result:</th>
+        <td>
+        <div id="y2">{{result}}</div>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">Hex number result:</th>
+        <td>
+        <div id="y3">0x{{hex}} </div>
+        </td>
+        </tr>
+        <tr class="ans_caption">
+        <td colspan="2">
+        <div>
+
+    </div>
+
+
+        <!--<style>
+            .steps-title {
+                margin-top: 30px;
+                font-size: 20px;
+            }
+            .steps {
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 20px;
+                list-style: none;
+                padding-left: 20px;
+            }
+            .steps li {
+                margin-bottom: 10px;
+            }
+        </style> -->
+
+        {% elif operation in ["add", "Signed_add", "float_add"] %}
+        <div class="table-responsive">
+            <table class="table table-bordered">
+            <thead>
+            <tr class="bg-info text-white">
+            <td class="info" colspan="2" style="font-size: 25px;">Result: Addition</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            </tr>
+            <tr>
+            <th scope="row">Number 2:</th>
+            <td>
+            <div id="y1">{{first}}</div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Number 2:</th>
+            <td>
+            <div id="y2">{{second}}</div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Binary Number Result:</th>
+            <td>
+            <div id="y3">{{result}} </div>
+            </td>
+            </tr>
+            <th scope="row">Decimal Number Result:</th>
+            <td>
+            <div id="y3">{{decimal}} </div>
+            <tr class="ans_caption">
+            <td colspan="2">
+            <div>
+
+        </div>
+
+        <span class="html_of_steps" style="letter-spacing: 10px;text-align:center;">
+            <p style="letter-spacing: 0px">We have to add First Number with Second Number:</p>
+            <table style="margin-left:auto;margin-right:auto;text-align:right">
+                <tbody>
+                    <tr>
+                        <td style="border:none">&nbsp;&nbsp; {{first}}</td>
+                    </tr>
+                    <tr style="text-align:right">
+                        <td style="border:none"><strong class="orange-sign">+</strong>  {{second}}</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top:2px solid #ed5c35;border-bottom:2px solid #ed5c35;border-left:none;border-right:none;text-align:right">{{result}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </span>
+
+        <div class="text-center my-3">
+            <a href="/" class="btn btn-info">Back</a>
+
+
+
+        {% elif operation in ["sub", "Signed_sub", "float_sub"] %}
+        <div class="table-responsive">
+            <table class="table table-bordered">
+            <thead>
+            <tr class="bg-info text-white">
+            <td class="info" colspan="2" style="font-size: 25px;">Result: Subtraction</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            </tr>
+            <tr>
+            <th scope="row">Number 2:</th>
+            <td>
+            <div id="y1">{{first}}</div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Number 2:</th>
+            <td>
+            <div id="y2">{{second}}</div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Binary Number Result:</th>
+            <td>
+            <div id="y3">{{result}} </div>
+            </td>
+            </tr>
+            <th scope="row">Decimal Number Result:</th>
+            <td>
+            <div id="y3">{{decimal}} </div>
+            <tr class="ans_caption">
+            <td colspan="2">
+            <div>
+
+        </div>
+
+        <span class="html_of_steps" style="letter-spacing: 10px;text-align:center;">
+            <p style="letter-spacing: 0px">We have to subtract second Number from first Number:</p>
+            <table style="margin-left:auto;margin-right:auto;text-align:right">
+                <tbody>
+                    <tr>
+                        <td style="border:none">&nbsp;&nbsp; {{first}}</td>
+                    </tr>
+                    <tr style="text-align:right">
+                        <td style="border:none"><strong class="orange-sign">-</strong>  {{second}}</td>
+                    </tr>
+                    <tr>
+                        <td style="border-top:2px solid #ed5c35;border-bottom:2px solid #ed5c35;border-left:none;border-right:none;text-align:right">{{result}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </span>
+        <div class="text-center my-3">
+            <a href="/arithmetic" class="btn btn-info">Back</a>
+
+
+        {% elif operation in ["mul", "float_mul"] %}
+        <div class="table-responsive">
+            <table class="table table-bordered">
+            <thead>
+            <tr class="bg-info text-white">
+            <td class="info" colspan="2" style="font-size: 25px;">Result: Multiplication</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            </tr>
+            <tr>
+            <th scope="row">Number 1:</th>
+            <td>
+            <div id="y1">{{first}}</div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Number 2:</th>
+            <td>
+            <div id="y2">{{second}}</div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Binary Number Result:</th>
+            <td>
+            <div id="y3">{{result}} </div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Decimal Number Result:</th>
+            <td>
+            <div id="y3">{{decimal}} </div>
+            </td>
+            </tr>
+            <tr class="ans_caption">
+            <td colspan="2">
+            <div>
+
+        </div>
+
+                {% elif operation == "div" %}
+                <div class="table-responsive">
+            <table class="table table-bordered">
+            <thead>
+            <tr class="bg-info text-white">
+            <td class="info" colspan="2" style="font-size: 25px;">Result: Division</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            </tr>
+            <tr>
+            <th scope="row">Number 1:</th>
+            <td>
+            <div id="y1">{{first}}</div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Number 2:</th>
+            <td>
+            <div id="y2">{{second}}</div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Quotient:</th>
+            <td>
+            <div id="y3">{{result[0]}} </div>
+            </td>
+            </tr>
+            <tr>
+            <th scope="row">Reminder:</th>
+            <td>
+            <div id="y3">{{result[1]}} </div>
+            </td>
+            </tr>
+            <tr class="ans_caption">
+            <td colspan="2">
+            <div>
+
+        </div>
+
+        {% elif operation in ["Left_shift", "Right_shift", "AND", "OR", "XOR"] %}
+        <h2 style="text-align: left;
+font-weight: bold;
+color: #333;
+margin-left: 10px;">Binary Arithmetic Result: </h2>
+<div class="container-fluid">
+    <div class="container noP">
+        <div class="leftcol">
+            <div class="col-md-12 shadowBox">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>First Number</th>
+                            <th>Operation</th>
+                            <th>Second Number</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ first }}</td>
+                            <td>{{ operation }}</td>
+                            <td>{{ second }}</td>
+                            <td>{{ result }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center my-3">
+                    <a href="/arithmetic" class="btn btn-info">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    {% endif %}
+    <!--<h4 class="result-title" style="margin-top: 30px; font-size: 20px;">Conversion Result:</h4>
+    <ul class="conversion-result" style="font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
+        {{ result }}
+    </ul> -->
+{% endblock %}
